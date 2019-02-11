@@ -1,0 +1,31 @@
+Harjoitus logi
+
+1. Napin toiminto, tilan muutaminen, ledi
+
+2. Tilat 1 = idle, 2 = mittaus, 3 = hissi, 4 = kavellaan
+
+3. Mittaa() funktion toteutus, print mitataan, sammuta ledi,    //ei tarvinnukkaan tätä
+
+4. Labtaskin while:iin tilakone switch rakenne, idle ja mittaus
+    
+. #include "mpu9250.h" ja i2c driver lisätty, MPU muuttujat Handle hMpuPin + state ja config ja MPU I2C käyttö. Mainiin open hMpuPin
+
+. Labtaskiin I2C handle ja params MPU:lle, params alustus, I2C auki, "Error Initializing I2CMPU" - edellinen I2C oli auki
+
+. setup mpusensori, setupin jalkeen suljetaan I2C, aukaistaan tarvittaessa
+
+. whilen tila 2=mittaus, aukaise i2cMPU, getdata, sammuta ledi, sulje i2c, tila idleen
+
+. getdataan rawdata dataksi. getdata toimii.
+
+. tila 2 = mitataan, mittaa 20 näytettä ja sijoita z-kiihtyvyydet taulukkoon zaccs
+
+. tunnistus alg. zaccs parametri tunnistus algoritmille. Algoritimin perusteella tilaksi hissi tai kävely. //Tila mittaus päättyy.
+
+. whilen tilat 3 ja 4, hissi ja kävely toiminnallisuus, näytön tekstit
+
+. Poistettu "check that display works", lisätty näytölle tekstiä hello, paina nappia, mitataan, tunnistus yms.
+
+. Lisätty viestin lähetys kävely tilan loppuun
+
+. commtaskin whileen viestin vastaanotto ja tulostus näytölle
